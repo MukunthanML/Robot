@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1.2 (Python 3.9.5 on win32)" generated="20211105 21:44:10.904" rpa="false" schemaversion="2">
+<suite id="s1" name="Excel-DataParameterization" source="C:\Users\91809\PycharmProjects\Robot\Excel-DataParameterization.robot">
+<test id="s1-t1" name="LoginTestWithExcel using standard_user and secret_sauce">
+<kw name="LoginForm">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>browser=Chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211105 21:44:12.616" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20211105 21:44:12.615" endtime="20211105 21:44:17.261"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211105 21:44:17.262" endtime="20211105 21:44:17.404"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211105 21:44:17.405" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211105 21:44:17.404" endtime="20211105 21:44:17.530"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211105 21:44:17.531" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211105 21:44:17.531" endtime="20211105 21:44:17.639"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211105 21:44:17.640" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20211105 21:44:17.640" endtime="20211105 21:44:17.747"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211105 21:44:22.754" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211105 21:44:17.748" endtime="20211105 21:44:22.754"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="header_container"]/div[2]/span</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211105 21:44:22.781" level="INFO">Current page contains element 'xpath=//*[@id="header_container"]/div[2]/span'.</msg>
+<status status="PASS" starttime="20211105 21:44:22.755" endtime="20211105 21:44:22.781"/>
+</kw>
+<status status="PASS" starttime="20211105 21:44:12.615" endtime="20211105 21:44:22.781"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211105 21:44:22.782" endtime="20211105 21:44:25.030"/>
+</kw>
+<status status="PASS" starttime="20211105 21:44:12.612" endtime="20211105 21:44:25.031"/>
+</test>
+<test id="s1-t2" name="LoginTestWithExcel using locked_out_user and secret_sauce">
+<kw name="LoginForm">
+<arg>locked_out_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>browser=Chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211105 21:44:25.035" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20211105 21:44:25.034" endtime="20211105 21:44:26.786"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211105 21:44:26.786" endtime="20211105 21:44:26.928"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211105 21:44:26.930" level="INFO">Typing text 'locked_out_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211105 21:44:26.929" endtime="20211105 21:44:27.134"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211105 21:44:27.135" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211105 21:44:27.134" endtime="20211105 21:44:27.252"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211105 21:44:27.253" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20211105 21:44:27.252" endtime="20211105 21:44:27.315"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211105 21:44:32.319" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211105 21:44:27.315" endtime="20211105 21:44:32.319"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="header_container"]/div[2]/span</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20211105 21:44:32.537" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20211105 21:44:32.351" endtime="20211105 21:44:32.537"/>
+</kw>
+<msg timestamp="20211105 21:44:32.540" level="FAIL">Page should have contained element 'xpath=//*[@id="header_container"]/div[2]/span' but did not.</msg>
+<status status="FAIL" starttime="20211105 21:44:32.319" endtime="20211105 21:44:32.540"/>
+</kw>
+<status status="FAIL" starttime="20211105 21:44:25.034" endtime="20211105 21:44:32.540"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211105 21:44:32.541" endtime="20211105 21:44:34.749"/>
+</kw>
+<status status="FAIL" starttime="20211105 21:44:25.032" endtime="20211105 21:44:34.750">Page should have contained element 'xpath=//*[@id="header_container"]/div[2]/span' but did not.</status>
+</test>
+<test id="s1-t3" name="LoginTestWithExcel using problem_user and secret_sauce">
+<kw name="LoginForm">
+<arg>problem_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>browser=Chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211105 21:44:34.754" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20211105 21:44:34.753" endtime="20211105 21:44:36.872"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211105 21:44:36.872" endtime="20211105 21:44:37.002"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211105 21:44:37.003" level="INFO">Typing text 'problem_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211105 21:44:37.002" endtime="20211105 21:44:37.203"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211105 21:44:37.204" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211105 21:44:37.203" endtime="20211105 21:44:37.343"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211105 21:44:37.344" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20211105 21:44:37.343" endtime="20211105 21:44:37.495"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211105 21:44:42.509" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211105 21:44:37.496" endtime="20211105 21:44:42.509"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="header_container"]/div[2]/span</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211105 21:44:42.524" level="INFO">Current page contains element 'xpath=//*[@id="header_container"]/div[2]/span'.</msg>
+<status status="PASS" starttime="20211105 21:44:42.510" endtime="20211105 21:44:42.524"/>
+</kw>
+<status status="PASS" starttime="20211105 21:44:34.753" endtime="20211105 21:44:42.524"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211105 21:44:42.526" endtime="20211105 21:44:44.764"/>
+</kw>
+<status status="PASS" starttime="20211105 21:44:34.751" endtime="20211105 21:44:44.764"/>
+</test>
+<test id="s1-t4" name="LoginTestWithExcel using performance_glitch_user and secret_sauce">
+<kw name="LoginForm">
+<arg>performance_glitch_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>https://www.saucedemo.com/</arg>
+<arg>browser=Chrome</arg>
+<arg>executable_path=${driver_path}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20211105 21:44:44.767" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20211105 21:44:44.767" endtime="20211105 21:44:47.594"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20211105 21:44:47.595" endtime="20211105 21:44:47.741"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211105 21:44:47.742" level="INFO">Typing text 'performance_glitch_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20211105 21:44:47.741" endtime="20211105 21:44:47.963"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20211105 21:44:47.964" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<status status="PASS" starttime="20211105 21:44:47.963" endtime="20211105 21:44:48.072"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id=login-button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20211105 21:44:48.073" level="INFO">Clicking element 'id=login-button'.</msg>
+<status status="PASS" starttime="20211105 21:44:48.073" endtime="20211105 21:44:53.200"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20211105 21:44:58.205" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20211105 21:44:53.200" endtime="20211105 21:44:58.205"/>
+</kw>
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath=//*[@id="header_container"]/div[2]/span</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20211105 21:44:58.227" level="INFO">Current page contains element 'xpath=//*[@id="header_container"]/div[2]/span'.</msg>
+<status status="PASS" starttime="20211105 21:44:58.205" endtime="20211105 21:44:58.227"/>
+</kw>
+<status status="PASS" starttime="20211105 21:44:44.767" endtime="20211105 21:44:58.228"/>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" starttime="20211105 21:44:58.228" endtime="20211105 21:45:00.547"/>
+</kw>
+<status status="PASS" starttime="20211105 21:44:44.765" endtime="20211105 21:45:00.548"/>
+</test>
+<doc>Suite description</doc>
+<status status="FAIL" starttime="20211105 21:44:10.906" endtime="20211105 21:45:00.549"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="3" fail="1" skip="0" id="s1" name="Excel-DataParameterization">Excel-DataParameterization</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
